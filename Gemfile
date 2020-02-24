@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'activerecord-import'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.4.1'
 gem 'coffee-rails', '~> 4.2'
@@ -15,7 +16,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'activerecord-import'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

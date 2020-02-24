@@ -1,7 +1,6 @@
 require 'csv'
 
 namespace :import do
-
   desc 'Import merchants'
   task merchants: :environment do
     merchants = []

@@ -1,5 +1,4 @@
 class MerchantsController < ApplicationController
-
   before_action :set_merchant, except: [:index]
 
   def index
