@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    status { 1 }
+    status { 'active' }
     email { Faker::Internet.email }
     name { Faker::Name.name }
     description { Faker::Lorem.paragraph }
