@@ -4,7 +4,7 @@ nav.navbar.navbar-expand-lg.bg-dark[role="navigation"]
   #navbarSupportedContent.collapse.navbar-collapse
     ul.navbar-nav
       li.nav-item
-        = link_to 'Home', "javascript:void(0);", class: "nav-link text-white"
+        = link_to 'Home', root_path, class: "nav-link text-white"
       - if user_signed_in?
         li.nav-item
           = link_to 'Logout', destroy_user_session_path, class: "nav-link text-white", method: :delete
