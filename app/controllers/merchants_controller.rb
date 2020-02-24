@@ -11,7 +11,7 @@ class MerchantsController < ApplicationController
 
   def update
     if @merchant.update(merchant_params)
-      redirect_to @merchant
+      redirect_to merchant_path(@merchant)
     else
       render :edit
     end
@@ -26,10 +26,14 @@ class MerchantsController < ApplicationController
     redirect_to merchants_path
   end
 
+  def transaction_history
+    @transactions = @merchant.transactions
+  end
+
   private
 
   def merchant_params
-    params.require(:merchant).permit(:name, :email, :description, :status)
+    params.require(:user).permit(:name, :email, :description, :status)
   end
 
   def set_merchant
