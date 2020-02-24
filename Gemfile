@@ -25,6 +25,7 @@ group :development, :test do
   gem 'figaro'
   gem 'rspec-rails', '~> 4.0.0.beta'
   gem 'rubocop', require: false
+  gem 'faker'
 end
 
 group :development do
@@ -38,6 +39,8 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'shoulda-callback-matchers'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
