@@ -1,0 +1,16 @@
+.card-header
+  h2
+    | Payment processing app
+.main-container
+  .row
+    .center-block
+      h1
+        | Hello,
+      p
+        | Welcome to Payment processing app.
+      p
+        | Here you can check the list of created merchants, their transaction history and perform edit & delete operations on the same.
+      - if user_signed_in?
+        = link_to 'Merchants', "javascript:void(0);", class: 'btn btn-info pull-left'
+      - else
+        = link_to 'Login', new_user_session_path, class: 'btn btn-info pull-left'
