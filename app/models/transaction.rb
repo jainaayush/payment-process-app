@@ -6,6 +6,8 @@ class Transaction < ApplicationRecord
 
   after_initialize :set_uuid
 
+  scope :last_two_hours, -> { where(created_at: 2.hours.ago..Time.now)}
+
   def authorized?
     type == 'AuthorizeTransaction'
   end
