@@ -17,6 +17,7 @@ class User < ApplicationRecord
     def check_associated_transaction
       if transactions&.length >= 0
         errors.add(:base, 'Can not be deleted as transactions present')
+        throw :abort
       end
     end
 end

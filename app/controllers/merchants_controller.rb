@@ -2,7 +2,7 @@ class MerchantsController < ApplicationController
   before_action :set_merchant, except: [:index]
 
   def index
-    @merchants = current_user.merchants
+    @merchants = current_user.merchants.order(:name)
   end
 
   def show; end
