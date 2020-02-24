@@ -5,21 +5,22 @@ ruby '2.6.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.4'
 gem 'sass-rails', '~> 5.0'
+gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'figaro'
-  gem 'rubocop', require: false
-  gem 'rspec-rails', '~> 4.0.0.beta'
   gem 'factory_bot_rails'
+  gem 'figaro'
+  gem 'rspec-rails', '~> 4.0.0.beta'
+  gem 'rubocop', require: false
 end
 
 group :development do
